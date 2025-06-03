@@ -1,5 +1,4 @@
-# Uncertainty-Quantification-for-LLMs
-Fully Probabilistic Framework for Uncertainty Quantification in LLMs
+
 # Inv-Entropy: Uncertainty-Quantification-for-LLMs
 A Fully Probabilistic Framework for Uncertainty Quantification in LLMs.
 ## Abstract
