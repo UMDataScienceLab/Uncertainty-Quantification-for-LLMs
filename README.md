@@ -35,7 +35,7 @@ Large language models (LLMs) have transformed natural language processing, but t
     python lmpolygraph.py --estimator "DegMat" --input_path "inputfile.csv"   --output_path "outputpath"
     ```
     
-## Structure of `inputfile.csv`
+## Structure of inputfile.csv
 An example input file is `trivia5.csv`. It should contain two columns:
 - **`question`**: The text of the question.  
 - **`value`**: The correct answer to the question.
