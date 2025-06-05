@@ -10,6 +10,7 @@ Large language models (LLMs) have transformed natural language processing, but t
 The figure below illustrates the core structure of our proposed dual random walk framework:
 
 ![Dual Random Walk Framework](images/dual_random_walk.png)
+<img src="images/dual_random_walk.png" alt="Dual Random Walk" width="500"/>
 
 
 ## API Usage
