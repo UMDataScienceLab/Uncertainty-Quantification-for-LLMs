@@ -58,7 +58,6 @@ def js_divergence(p, q):
 
 
 def parse_matrix(matrix_str):
-    """将字符串转换为 numpy 矩阵"""
     return np.array(ast.literal_eval(matrix_str))
 
 def sbert_embeddings(texts):
