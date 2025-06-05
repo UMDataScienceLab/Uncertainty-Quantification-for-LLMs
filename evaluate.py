@@ -98,7 +98,6 @@ def compute_conditional_entropy(prob_matrix, axis):
     return np.sum(entropy_values)  
 
 def compute_joint_entropy(pxy):
-    """ 计算联合熵 H(X, Y) = -sum p(x,y) log p(x,y) """
     pxy_nonzero = pxy[pxy > 0]  
     return -np.sum(pxy_nonzero * np.log2(pxy_nonzero))
 
