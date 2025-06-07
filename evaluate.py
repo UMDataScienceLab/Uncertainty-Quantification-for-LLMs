@@ -209,7 +209,7 @@ def process_csv(df):
         used_indices = set()
         np.random.seed(333)
         for i in range(N):
-            # Generate unique keep_indices
+            
             while True:
                 keep_indices = [
                     random.randint(0, 4),
@@ -358,7 +358,7 @@ def calculate_overall_stats(results_df, correctness_df):
         
         x = -results_df[column].values
         
-        # 初始化存储列表
+        
         auroc_vals = []
         prr_vals = []
         brier_isotonic_vals = []
