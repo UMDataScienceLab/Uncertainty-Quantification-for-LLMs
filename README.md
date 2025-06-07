@@ -50,7 +50,7 @@ We conducted experiments using five different datasets. You can download each of
     ```
   - For other benchmark models, specify the desired estimator using --estimator and optionally adjust the sampling temperature using --temperature. For example:
     ```
-    python lmpolygraph.py --estimator "DegMat" --input_path "inputfile.csv"   --output_path "outputpath"
+    python lmpolygraph.py --estimator "DegMat" --input_path inputfile.csv   --output_path outputpath
     ```
     
 ## Structure of inputfile.csv
