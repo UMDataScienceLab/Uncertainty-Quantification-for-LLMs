@@ -28,7 +28,7 @@ We conducted experiments using five different datasets. You can download each of
 
 - **[TriviaQA](https://huggingface.co/datasets/mandarjoshi/trivia_qa)**  
 - **[SciQ](https://huggingface.co/datasets/allenai/sciq)**  
-- **[SimpleQA](https://huggingface.co/datasets/basicv8vc/SimpleQA)**  
+- **[Natural Questions](https://huggingface.co/datasets/lighteval/natural_questions_clean)**  
 - **[MMLU](https://huggingface.co/datasets/cais/mmlu)**  
 - **[GSM8K](https://huggingface.co/datasets/openai/gsm8k)**
 
