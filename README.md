@@ -11,7 +11,7 @@ The figure below illustrates the core structure of our proposed dual random walk
 
 <img src="images/dual_random_walk.png" alt="Dual Random Walk" width="500"/>
 
-## python package
+## Python Package
 To compute Inv-Entropy easily, we provide a Python package. You can find full documentation at **[pypi:inventropy](https://pypi.org/project/inventropy/)**
 
 Quick Start： Basic Usage (OpenAI)
