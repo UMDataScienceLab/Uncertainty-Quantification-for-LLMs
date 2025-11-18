@@ -11,6 +11,51 @@ The figure below illustrates the core structure of our proposed dual random walk
 
 <img src="images/dual_random_walk.png" alt="Dual Random Walk" width="500"/>
 
+## python package
+To compute Inv-Entropy easily, we provide a Python package. You can find full documentation at **[pypi:inventropy]https://pypi.org/project/inventropy/**
+### Quick Start： Basic Usage (OpenAI)
+
+```python
+import openai
+from inventropy import calculate_inv_entropy
+
+# Set your OpenAI API key
+openai.api_key = "your-api-key-here"
+
+# Calculate inverse entropy for a question
+question = "What is artificial intelligence?"
+mean_inv_entropy = calculate_inv_entropy(question)
+
+print(f"Inverse Entropy: {mean_inv_entropy:.4f}")
+```
+
+## Running Inv-Entropy and Reproducing the Evaluation in Our Paper
+  - Complete the paraphrasing, response generation, and correctness evaluation by running
+    ```
+    python pipeline_agent.py inputfile.csv
+    ```
+  - After running the command above, a folder named inputfile will be created. To compute the probability in the fully probabilistic framework and uncertainty measures including inv-entropy and evaluation metrics including AUROC, PRR, and Brier Score, run:
+    ```
+    python pipeline_metric.py inputfile
+    ```
+    
+## Running Baseline Models and Their Evaluation
+  - To run the Semantic Entropy baseline, use:
+    ```
+    python semantic_entropy.py --input inputfile.csv  --output outputpath
+    ```
+  - For other benchmark models, specify the desired estimator using --estimator and optionally adjust the sampling temperature using --temperature. For example:
+    ```
+    python lmpolygraph.py --estimator "DegMat" --input_path inputfile.csv   --output_path outputpath
+    ```
+    
+## Structure of inputfile.csv
+An example input file is `trivia5.csv`. It should contain two columns:
+- **`question`**: The text of the question.  
+- **`value`**: The correct answer to the question.
+
+You can use any dataset that follows this structure to run our code.
+
 
 ## API Usage
 - **ChatGPT (OpenAI)**:  
@@ -31,34 +76,4 @@ We conducted experiments using five different datasets. You can download each of
 - **[Natural Questions](https://huggingface.co/datasets/lighteval/natural_questions_clean)**  
 - **[MMLU](https://huggingface.co/datasets/cais/mmlu)**  
 - **[GSM8K](https://huggingface.co/datasets/openai/gsm8k)**
-
-
-## How to run Inv-Entropy
-  - Complete the paraphrasing, response generation, and correctness evaluation by running
-    ```
-    python pipeline_agent.py inputfile.csv
-    ```
-  - After running the command above, a folder named inputfile will be created. To compute the probability in the fully probabilistic framework and uncertainty measures including inv-entropy and evaluation metrics including AUROC, PRR, and Brier Score, run:
-    ```
-    python pipeline_metric.py inputfile
-    ```
-    
-## How to run baseline models
-  - To run the Semantic Entropy baseline, use:
-    ```
-    python semantic_entropy.py --input inputfile.csv  --output outputpath
-    ```
-  - For other benchmark models, specify the desired estimator using --estimator and optionally adjust the sampling temperature using --temperature. For example:
-    ```
-    python lmpolygraph.py --estimator "DegMat" --input_path inputfile.csv   --output_path outputpath
-    ```
-    
-## Structure of inputfile.csv
-An example input file is `trivia5.csv`. It should contain two columns:
-- **`question`**: The text of the question.  
-- **`value`**: The correct answer to the question.
-
-You can use any dataset that follows this structure to run our code.
-
-
 
