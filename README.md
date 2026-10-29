@@ -78,3 +78,17 @@ We conducted experiments using five different datasets. You can download each of
 - **[MMLU](https://huggingface.co/datasets/cais/mmlu)**  
 - **[GSM8K](https://huggingface.co/datasets/openai/gsm8k)**
 
+## Citation
+
+[Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/9afca5107064eb89546fabb4abc379a7-Abstract-Conference.html) (NeurIPS 2025). If you use this code, please cite:
+
+```bibtex
+@inproceedings{song2025inventropy,
+  title={Inv-Entropy: A Fully Probabilistic Framework for Uncertainty Quantification in Language Models},
+  author={Song, Haoyi and Ji, Ruihan and Shi, Naichen and Lai, Fan and Al Kontar, Raed},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={38},
+  pages={107889--107922},
+  year={2025}
+}
+```
